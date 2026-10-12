@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot RH | Multico - Legal & Confidentialité</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        discord: {
+                            bg: '#101216',
+                            card: '#181b20',
+                            border: '#2b2f36',
+                            accent: '#5865F2',
+                            accentHover: '#4752C4',
+                            textMuted: '#949ba4',
+                            heading: '#f2f3f5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-discord-bg text-gray-300 font-sans min-h-screen flex flex-col selection:bg-discord-accent selection:text-white">
 
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-discord-bg/90 backdrop-blur-md border-b border-discord-border">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Branding -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-discord-accent/20 border border-discord-accent/40 flex items-center justify-center text-discord-accent shadow-lg shadow-discord-accent/10">
+                        <i class="fa-solid fa-robot text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold text-discord-heading tracking-tight">Bot RH | Multico</span>
+                        <span class="block text-xs text-discord-textMuted">Rescue Horizon</span>
+                    </div>
+                </div>
+
+                <!-- Tab Switching Links -->
+                <nav class="flex space-x-2 bg-discord-card p-1 rounded-xl border border-discord-border">
+                    <button id="btn-terms" onclick="switchTab('terms')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-file-contract"></i>
+                        <span>Conditions d'Utilisation</span>
+                    </button>
+                    <button id="btn-privacy" onclick="switchTab('privacy')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Confidentialité</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        
+        <!-- Hero Section -->
+        <div class="mb-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-discord-card via-discord-card to-discord-accent/10 border border-discord-border relative overflow-hidden">
+            <div class="relative z-10">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-discord-accent/10 border border-discord-accent/30 text-discord-accent text-xs font-semibold mb-3">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Informations Légales & Conformité</span>
+                </div>
+                <h1 id="page-title" class="text-2xl sm:text-3xl font-extrabold text-discord-heading tracking-tight mb-2">
+                    Conditions Générales d'Utilisation
+                </h1>
+                <p class="text-discord-textMuted text-sm sm:text-base max-w-2xl">
+                    Dernière mise à jour : <span class="text-gray-200 font-medium">12 Octobre 2026</span>. Document officiel encadrant l'utilisation du bot Discord Bot RH | Multico.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION: TERMS OF SERVICE (CGU) -->
+        <article id="section-terms" class="space-y-6">
+            <div class="bg-discord-card border border-discord-border rounded-2xl p-6 sm:p-8 space-y-6">
+                
+                <section class="space-y-3">
+                    <h2 class="text-xl font-bold text-discord-heading flex items-center space-x-2">
+                        <span class="text-discord-accent">1.</span>
+                        <span>Acceptation des conditions</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed text-gray-300">
+                        En ajoutant ou en utilisant l'application <strong>Bot RH | Multico</strong> sur votre serveur Discord, vous acceptez d'être lié par les présentes Conditions d'Utilisation. Si vous n'acceptez pas ces conditions, vous devez immédiatement retirer l'application de votre serveur et cesser toute interaction avec elle.
+                    </p>
+                </section>
+
+                <hr class="border-discord-border">
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-bold text-discord-heading flex items-center space-x-2">
+                        <span class="text-discord-accent">2.</span>
+                        <span>Description du Service</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed text-gray-300">
+                        Bot RH | Multico est un outil de gestion des Ressources Humaines et de suivi des prises de service conçu pour les communautés de jeu de rôle (RP) et les structures d'urgence sur Discord (Rescue Horizon). Il permet le calcul du temps de service, l'organisation d'effectifs et la génération de statistiques associées.
+                    </p>
+                </section>
+
+                <hr class="border-discord-border">
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-bold text-discord-heading flex items-center space-x-2">
+                        <span class="text-discord-accent">3.</span>
+                        <span>Conditions d'utilisation et règles d'usage</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed text-gray-300 mb-2">
+                        L'utilisateur s'engage à respecter les Conditions d'Utilisation de Discord (Discord Terms of Service). Il est strictement interdit de :
+                    </p>
+                    <ul class="list-disc list-inside text-sm sm:text-base space-y-2 text-gray-300 pl-2">
+                        <li>Tenter d'exploiter d'éventuelles vulnérabilités du bot ou de l'infrastructure associée.</li>
+                        <li>Utiliser le bot de manière abusiver pour surcharger le service (spam, attaques DoS).</li>
+                        <li>Falsifier intentionnellement les enregistrements ou données de temps de service.</li>
+                        <li>Utiliser le bot à des fins illégales ou contraires au règlement de Discord.</li>
+                    </ul>
+                </section>
+
+                <hr class="border-discord-border">
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-bold text-discord-heading flex items-center space-x-2">
+                        <span class="text-discord-accent">4.</span>
+                        <span>Disponibilité du service</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed text-gray-300">
+                        Le service est fourni "en l'état" et "selon disponibilité". L'équipe de développement de Rescue Horizon s'efforce de maintenir un taux de disponibilité élevé, mais ne garantit pas une continuité de service ininterrompue. Des maintenances planifiées ou d'urgence peuvent survenir à tout moment.
+                    </p>
+                </section>
+
+                <hr class="border-discord-border">
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-bold text-discord-heading flex items-center space-x-2">
+                        <span class="text-discord-accent">5.</span>
+                        <span>Modification des conditions</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed text-gray-300">
+                        Nous nous réservons le droit de modifier ces conditions à tout moment. Les utilisateurs seront informés de toute révision majeure via les canaux d'information officiels de Rescue Horizon.
+                    </p>
+                </section>
+
+            </div>
+        </article>
+
+        <!-- SECTION: PRIVACY POLICY (POLITIQUE DE CONFIDENTIALITE) -->
+        <article id="section-privacy" class="space-y-6 hidden">
+            <div class="bg-discord-card border border-discord-border rounded-2xl p-6 sm:p-8 space-y-6">
+                
+                <section class="space-y-3">
+                    <h2 class="text-xl font-bold text-discord-heading flex items-center space-x-2">
+                        <span class="text-discord-accent">1.</span>
+                        <span>Données collectées</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed text-gray-300 mb-2">
+                        Afin de fournir ses fonctionnalités de gestion RH et de prise de service, Bot RH | Multico collecte uniquement le strict minimum des données strictement nécessaires :
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div class="bg-discord-bg/60 p-4 rounded-xl border border-discord-border">
+                            <h3 class="font-semibold text-discord-heading mb-1 text-sm"><i class="fa-solid fa-user text-discord-accent mr-2"></i> Identifiants Discord (ID)</h3>
+                            <p class="text-xs text-discord-textMuted">Identifiant unique utilisateur (User ID) et identifiant serveur (Guild ID) afin d'associer vos heures de service à votre compte.</p>
+                        </div>
+                        <div class="bg-discord-bg/60 p-4 rounded-xl border border-discord-border">
+                            <h3 class="font-semibold text-discord-heading mb-1 text-sm"><i class="fa-solid fa-clock text-discord-accent mr-2"></i> Horodatages de service</h3>
+                            <p class="text-xs text-discord-textMuted">Heure exacte d'entrée et de sortie de service, durée cumulée et prises de pause enregistrées.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-discord-border">
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-bold text-discord-heading flex items-center space-x-2">
+                        <span class="text-discord-accent">2.</span>
+                        <span>Utilisation des données</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed text-gray-300">
+                        Les données enregistrées sont exclusivement utilisées pour le fonctionnement interne du bot (affichage du profil RH, rapports de présence, classements d'activité RP). <strong>Aucune donnée n'est vendue, louée ou transmise à des tiers sous quelque prétexte que ce soit.</strong>
+                    </p>
+                </section>
+
+                <hr class="border-discord-border">
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-bold text-discord-heading flex items-center space-x-2">
+                        <span class="text-discord-accent">3.</span>
+                        <span>Conservation et stockage des données</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed text-gray-300">
+                        Vos données sont conservées de manière sécurisée aussi longtemps que le bot est présent sur le serveur Discord où vous effectuez vos services. Si le bot est retiré d'un serveur, les données associées à ce serveur peuvent être conservées pendant une période maximale de 30 jours avant suppression automatique.
+                    </p>
+                </section>
+
+                <hr class="border-discord-border">
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-bold text-discord-heading flex items-center space-x-2">
+                        <span class="text-discord-accent">4.</span>
+                        <span>Vos droits (Suppression & Accès)</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed text-gray-300">
+                        Conformément à la réglementation sur la protection des données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression des données personnelles vous concernant. Vous pouvez demander la suppression complète de vos données enregistrées en contactant directement l'équipe administrative via notre serveur Discord ou par e-mail.
+                    </p>
+                </section>
+
+            </div>
+        </article>
+
+        <!-- Support / Contact Card -->
+        <div class="mt-8 bg-discord-card border border-discord-border rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <h3 class="text-lg font-bold text-discord-heading">Une question ou une demande d'assistance ?</h3>
+                <p class="text-sm text-discord-textMuted">Contactez l'équipe administrative de Rescue Horizon pour toute question relative aux données.</p>
+            </div>
+            <a href="https://discord.gg" target="_blank" class="px-5 py-2.5 bg-discord-accent hover:bg-discord-accentHover text-white text-sm font-medium rounded-xl transition-all duration-200 shadow-md flex items-center space-x-2 shrink-0">
+                <i class="fa-brands fa-discord"></i>
+                <span>Rejoindre le Support</span>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-discord-border py-6 text-center text-xs text-discord-textMuted bg-discord-bg">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p>© 2026 Rescue Horizon. Tous droits réservés.</p>
+            <p>Bot RH | Multico n'est pas affilié à Discord Inc.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fonction pour changer d'onglet
+        function switchTab(tab) {
+            const btnTerms = document.getElementById('btn-terms');
+            const btnPrivacy = document.getElementById('btn-privacy');
+            const sectionTerms = document.getElementById('section-terms');
+            const sectionPrivacy = document.getElementById('section-privacy');
+            const pageTitle = document.getElementById('page-title');
+
+            if (tab === 'privacy') {
+                // Section Privacy Active
+                sectionTerms.classList.add('hidden');
+                sectionPrivacy.classList.remove('hidden');
+
+                btnPrivacy.className = "px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 flex items-center space-x-2 bg-discord-accent text-white shadow-md";
+                btnTerms.className = "px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 flex items-center space-x-2 text-discord-textMuted hover:text-white hover:bg-discord-border/50";
+
+                pageTitle.innerText = "Politique de Confidentialité";
+                window.location.hash = "privacy";
+            } else {
+                // Section Terms Active
+                sectionPrivacy.classList.add('hidden');
+                sectionTerms.classList.remove('hidden');
+
+                btnTerms.className = "px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 flex items-center space-x-2 bg-discord-accent text-white shadow-md";
+                btnPrivacy.className = "px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 flex items-center space-x-2 text-discord-textMuted hover:text-white hover:bg-discord-border/50";
+
+                pageTitle.innerText = "Conditions Générales d'Utilisation";
+                window.location.hash = "terms";
+            }
+        }
+
+        // Auto-détection de l'onglet selon le Hash d'URL (#terms ou #privacy)
+        function handleHashChange() {
+            const hash = window.location.hash.toLowerCase();
+            if (hash === '#privacy') {
+                switchTab('privacy');
+            } else {
+                switchTab('terms');
+            }
+        }
+
+        // Écoute des changements de hash et initialisation au chargement
+        window.addEventListener('hashchange', handleHashChange);
+        window.addEventListener('DOMContentLoaded', handleHashChange);
+    </script>
+</body>
+</html>
